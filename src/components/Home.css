@@ -64,10 +64,31 @@ header nav li a{
     font-family: "Oleo Script",sans-serif;
 }
 
+.mainSection{
+    background-image: url(https://images.unsplash.com/photo-1579551813772-a55dd7f9cb42?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+height: 40rem;
+background-position: center;
+}
+.mainSection{
+    align-items: center;
+    text-align: center;
+}
+.mainSectionTemp{
+    padding: 4em 2em;
+}
 
-
-
-
+.mainSectionTemp p {
+    color: #fff;
+    font-size: 1.5em;
+    margin-bottom: 4em;
+}
+.mainSectionTemp button{
+    padding: 1em;
+    font-size: 1.2em;
+    border-radius: 0.5em;
+    font-weight: bold;
+    font-family: inherit;
+}
 
 footer{
     text-align: center;
