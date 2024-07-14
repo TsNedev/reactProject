@@ -1,0 +1,10 @@
+section.offers{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    justify-content: space-evenly;
+    gap: 2em;
+    margin-top: 2em;
+}

@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <address>
+export default function Contacts(){
+    return(
+        <>
+        <p>Contacts</p>
+{/* <address>
         <h3>For contact</h3>
         <ul>
             <li>
@@ -25,7 +21,10 @@
                 <a href="http://#">Facebook</a>
             </li>
         </ul>
-    </address>
+    </address> */}
           
-</body>
-</html>
+          </>
+    )
+}
+
+    
