@@ -66,7 +66,10 @@ header nav li a{
 
 .mainSection{
     background-image: url(https://images.unsplash.com/photo-1579551813772-a55dd7f9cb42?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-height: 40rem;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-size:cover;
 background-position: center;
 }
 .mainSection{
@@ -74,6 +77,7 @@ background-position: center;
     text-align: center;
 }
 .mainSectionTemp{
+    height: 100%;
     padding: 4em 2em;
 }
 
@@ -91,6 +95,9 @@ background-position: center;
 }
 
 footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     text-align: center;
     padding: 2em;
     color: #fff;

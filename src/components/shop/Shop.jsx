@@ -1,16 +1,42 @@
+import {  Link, Route, Routes } from 'react-router-dom' 
+import ShopItems from './ShopItems'
+import { useEffect, useState } from 'react'
+
 
 export default function Shop() {
+   
+    const [ shopTitles,setShopTitles] = useState([]);
+
+    useEffect(()=>{
+        (async ()=>{
+            const response = await fetch(' http://localhost:3030/jsonstore/shop/tiles');
+            const result = await response.json(); 
+            setShopTitles(result);
+        })();
+    },[])
+console.log(shopTitles);
     return (
         <>
+       
             <section className="offers">
-                <article className="cardTemplate">
-                    <a href="#" className="grow">
-                        <img src="https://cdn.pixabay.com/photo/2020/09/20/17/18/knife-5587791_1280.jpg" alt="" />
-                        <h2 className="grow">Instruments</h2>
-                    </a>
+            {shopTitles.map((shopTitle) => (
+            
+       
+                <article className="cardTemplate" key={shopTitle._id}>
+                    <Link to= {`/shop/${shopTitle._id}`} className="grow">
+                        <img src={shopTitle.imageUrl} alt="" />
+                        <h2 className="grow">{shopTitle.title}</h2>
+                    </Link>
                 </article>
+ ))}
+   
+                
 
             </section>
+
+
+    
+
         </>
     )
 }

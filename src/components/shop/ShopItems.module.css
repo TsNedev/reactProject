@@ -1,0 +1,33 @@
+.SectionCards{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    justify-content: space-evenly;
+    gap: 2em;
+    margin-top: 2em;
+}
+
+section{
+    align-content: center;
+    text-align: center;
+}
+#items{
+    max-height: initial;
+    height: auto;
+    padding-bottom: 2em;
+}
+
+.heder{
+    font-size: 3em;
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+
+ .content {
+height: auto;
+padding: 0em 1em;
+
+}
