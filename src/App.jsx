@@ -3,12 +3,14 @@ import './Card.css'
 import './components/shop/Shop.css'
 import './components/Home.css'
 
+
 import Home from './components/Home'
-import Crud from './components/Crud'
 import Shop from './components/shop/Shop'
 import Gallery from './components/gallery/Gallery'
 import Contacts from './components/user/Contacts'
 import ShopItems from './components/shop/ShopItems'
+import Login from './components/user/Login'
+import Register from './components/user/Register'
 
 import {  Link, Route, Routes } from 'react-router-dom'
 
@@ -27,17 +29,19 @@ function App() {
                             <li><Link to={"/shop"}>Shop</Link></li>
                             <li><Link to="/gallery">Gallery</Link></li>
                             <li><Link to="/contacts">Contact us</Link></li>
-                            <li><a href="/login">Login</a></li>
-                            <li><a href="register">Register</a></li>
+                            <li><Link to="/login">Login</Link></li>
+                            <li><Link to="register">Register</Link></li>
                             <li><a href="logout">Logout</a></li>
                         </ul>
                     </nav>
                 </div>
-                <Crud />
+               
             </header>
 
             <Routes>
                 <Route path='/' element={<Home />} />
+                <Route path='/login' element={<Login />} />
+                <Route path='/register' element={<Register />} />
                 <Route path='/shop' element={<Shop />} />
                 <Route path='gallery' element = {<Gallery />}/>
                 <Route path='contacts' element = {<Contacts/>}/>
