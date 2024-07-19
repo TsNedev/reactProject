@@ -19,7 +19,7 @@ console.log(shopItems);
      <h1 className={styles.heder}>category</h1>
      { shopItems.map((shopItem) =>(
         <article id={styles.items} className="cardTemplate item" key={shopItem._id}>
-            <img src={shopItem.imgUrl} alt="" />
+            <img className="image" src={shopItem.imgUrl} alt="" />
             <div className={styles.content}>
             <h2>{shopItem.name}</h2>
             <p>{shopItem.info}</p>

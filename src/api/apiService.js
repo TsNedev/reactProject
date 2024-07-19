@@ -6,8 +6,17 @@ async function get(url){
         return(result);
 }
 
+async function post(){}
 
+async function put(){}
+
+async function remove() {
+    
+}
 
 export {
-    get
+    get,
+    post,
+    put,
+    remove
 }
