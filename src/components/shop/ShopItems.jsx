@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
 import styles from './ShopItems.module.css'
+import{get} from '../../api/apiService'
 
 export default function ShopItems(){
     const [shopItems,setShopItems] = useState([]);
     const {id} = useParams();
     useEffect(()=>{
 (async()=>{ 
- const response = await fetch( `http://localhost:3030/jsonstore/shop/shopDetails/${id}`);
- const result = await response.json();
+ const result = await get(`/shop/shopDetails/${id}`);
  setShopItems(result)
 })();
     },[])

@@ -1,6 +1,7 @@
 import {  Link, Route, Routes } from 'react-router-dom' 
 import ShopItems from './ShopItems'
 import { useEffect, useState } from 'react'
+import{get} from '../../api/apiService'
 
 
 export default function Shop() {
@@ -9,8 +10,7 @@ export default function Shop() {
 
     useEffect(()=>{
         (async ()=>{
-            const response = await fetch(' http://localhost:3030/jsonstore/shop/tiles');
-            const result = await response.json(); 
+            const result = await get('/shop/tiles');
             setShopTitles(result);
         })();
     },[])
