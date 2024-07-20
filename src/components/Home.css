@@ -94,9 +94,12 @@ background-position: center;
     font-family: inherit;
 }
 
+div.mainSection{
+    height: 100%
+}
+
 footer{
-    position: fixed;
-    bottom: 0;
+   
     width: 100%;
     text-align: center;
     padding: 2em;
