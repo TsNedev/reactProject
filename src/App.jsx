@@ -15,6 +15,7 @@ import Register from './components/user/Register'
 import {  Link, Route, Routes } from 'react-router-dom'
 import Footer from './Footer'
 import Header from './Header'
+import GalleryDetails from './components/gallery/GalleryDetailsPage'
 
 
 function App() {
@@ -30,6 +31,8 @@ function App() {
                 <Route path='gallery' element = {<Gallery />}/>
                 <Route path='contacts' element = {<Contacts/>}/>
                 <Route path='/shop/:id' element={<ShopItems/>} />
+                <Route path='/gallery/details' element={<GalleryDetails/>} />
+
             </Routes>
             
             <Footer/>

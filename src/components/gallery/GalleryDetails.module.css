@@ -1,0 +1,33 @@
+.details{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 2em;
+}
+
+.images{
+    width: 50%;
+    overflow: hidden;
+    height: 23em;
+    align-items: center;
+    padding-top: 2em;
+}
+.images img{
+ height: 100%;
+ width: auto;   
+}
+
+.info{
+    text-align: left;
+    padding: 1em;
+}
+
+.info ul{
+    padding-left: 2em;
+}
+.info li{
+    padding: 0.5em 0 ;
+}
+.info h2 {
+    margin-bottom: 0.5em;
+}
