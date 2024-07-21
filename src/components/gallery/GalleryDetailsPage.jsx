@@ -32,6 +32,10 @@ export default function GalleryDetails(){
             <h3>Description</h3>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat accusamus atque, iusto quia necessitatibus corrupti, ab itaque repellat quasi maxime, id fugiat. Esse exercitationem porro sapiente natus laudantium ducimus reprehenderit.</p>
           </div>
+          <div className={styles.buttons} >
+            <button className={styles.button}>Edit</button>
+            <button className={styles.button}>Delete</button>
+          </div>
         </section>
         </>
     )

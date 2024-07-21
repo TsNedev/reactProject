@@ -25,6 +25,8 @@ header{
     border: 1px solid black;
     width: 100%;
     background-color: #000;
+    flex-grow: 0;
+    height: 100%;
    
 }
 header div.logo{
@@ -68,9 +70,13 @@ header nav li a{
 
 
 
+
 footer{
+    
     text-align: center;
     padding: 2em;
     color: #fff;
     background-color: #000;
+  
 }
+ 

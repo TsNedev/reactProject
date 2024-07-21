@@ -1,0 +1,28 @@
+
+.header{
+  display: block;
+  width: 100%;
+font-size: 8em;
+padding: 0;
+padding-top: 0.5em;
+
+}
+
+.wrapper{
+height: 100%;
+text-align: center;
+display: flex;
+width: 100%;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+
+}
+
+.staling{
+padding-top: 1em;
+}
+.text{
+  display: block;
+  width: 100%;
+}

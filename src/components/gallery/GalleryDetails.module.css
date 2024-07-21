@@ -31,3 +31,14 @@
 .info h2 {
     margin-bottom: 0.5em;
 }
+.buttons{
+    display: block;
+    width: 100%;
+    text-align: center;
+    
+}
+
+.button{
+margin: 2em 2em;
+padding: 1em 2em;
+}

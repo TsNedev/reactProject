@@ -16,15 +16,17 @@ import {  Link, Route, Routes } from 'react-router-dom'
 import Footer from './Footer'
 import Header from './Header'
 import GalleryDetails from './components/gallery/GalleryDetailsPage'
+import NotFound from './components/NotFound'
 
 
 function App() {
     return (
-        <>
+        <div className='content'>
            <Header/>
            
             <Routes>
                 <Route path='/' element={<Home />} />
+                <Route path='/*' element={<NotFound/>} />
                 <Route path='/login' element={<Login />} />
                 <Route path='/register' element={<Register />} />
                 <Route path='/shop' element={<Shop />} />
@@ -36,7 +38,7 @@ function App() {
             </Routes>
             
             <Footer/>
-        </>
+        </div>
     )
 }
 
