@@ -17,9 +17,17 @@ import Footer from './Footer'
 import Header from './Header'
 import GalleryDetails from './components/gallery/GalleryDetailsPage'
 import NotFound from './components/NotFound'
+import { useState } from 'react'
 
 
 function App() {
+ 
+    const[auth,setAuth] = useState({});
+
+    const loginSubmitHandler = (values) =>{
+ console.log(values);
+    } 
+
     return (
         <div className='content'>
            <Header/>
@@ -27,7 +35,7 @@ function App() {
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/*' element={<NotFound/>} />
-                <Route path='/login' element={<Login />} />
+                <Route path='/login' element={<Login  loginSubmitHandler={loginSubmitHandler}/>} />
                 <Route path='/register' element={<Register />} />
                 <Route path='/shop' element={<Shop />} />
                 <Route path='gallery' element = {<Gallery />}/>
