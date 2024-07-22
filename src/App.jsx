@@ -27,12 +27,16 @@ import Logout from './components/logout/Logout'
 function App() {
 
     const navigate = useNavigate();
-    const [auth, setAuth] = useState({});
+    const [auth, setAuth] = useState(()=>{
+        localStorage.removeItem('accessToken');
+        return {}; 
+    });
 
     const loginSubmitHandler = async (values) => {
         const result = await autService.login(values.email, values.password);
 
         setAuth(result);
+        localStorage.setItem('accessToken',result.accessToken);
         navigate(Path.Home);
     };
 
@@ -40,11 +44,13 @@ function App() {
 
        const result = await autService.register(values.username,values.password,values.email,values.image,values.firstName,values.lastName,values.age);
        setAuth(result);
+       localStorage.setItem('accessToken',result.accessToken);
         navigate(Path.Home);
      }
      
    const logoutHandler = () =>{
     setAuth ({});
+    localStorage.removeItem('accessToken');
     navigate(Path.Home);
    }
 
