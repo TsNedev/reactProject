@@ -12,23 +12,26 @@ import ShopItems from './components/shop/ShopItems'
 import Login from './components/user/Login'
 import Register from './components/user/Register'
 
-import {  Link, Route, Routes } from 'react-router-dom'
+import {  Link, Route, Routes, useNavigate } from 'react-router-dom'
 import Footer from './Footer'
 import Header from './Header'
 import GalleryDetails from './components/gallery/GalleryDetailsPage'
 import NotFound from './components/NotFound'
 import { useState } from 'react'
 import AuthContext from './contexts/authContext'
+import Path from './paths/paths'
 
 
 function App() {
  
+    const navigate = useNavigate();
     const[auth,setAuth] = useState({});
 
     const loginSubmitHandler = async (values) =>{
    const result =  await autService.login(values.email,values.password); 
 
-   console.log(result);
+   setAuth(result);
+   navigate(Path.Home);
     } 
 
     return (
