@@ -20,7 +20,7 @@ import NotFound from './components/NotFound'
 import { useState } from 'react'
 import AuthContext from './contexts/authContext'
 import Path from './paths/paths'
-import CreatePost from './components/gallery/PostInGallery'
+import CreatePost from './components/gallery/postGallery/PostInGallery'
 import Logout from './components/logout/Logout'
 
 
