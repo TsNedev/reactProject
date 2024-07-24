@@ -1,14 +1,30 @@
-
+import *as galleryPostService from '../../../api/galleryPostService'
 import'./PostInGallery.css'
+import {useNavigate} from 'react-router-dom'
 
 export default function CreatePost(){
-    
+    const navigate = useNavigate();
+    const createPostSubmitHandler = async(e)=>{
+
+        e.preventDefault();
+
+        const postData = Object.fromEntries(new FormData (e.currentTarget));
+         try{
+            await galleryPostService.create(postData);
+            navigate('/gallery')
+         }catch{
+            console.log(err);
+         }
+         
+    }
+
+
     return (
         <div className="wrapper">
            
            <section className="registerForm  ">
            <h2>Create post</h2>
-                <form action="" /* onSubmit={onSubmit} */>
+                <form action=""  onSubmit={createPostSubmitHandler} >
 
                     <input type="text" 
                     placeholder="name" 

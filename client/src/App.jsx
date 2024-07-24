@@ -77,7 +77,7 @@ function App() {
                     <Route path='/shop/:id' element={<ShopItems />} />
                     <Route path='/gallery' element={<Gallery />} />
                     <Route path='/createPost' element={<CreatePost />} />
-                    <Route path='/gallery/details' element={<GalleryDetails />} />
+                    <Route path='/gallery/:id' element={<GalleryDetails />} />
                     <Route path='/contacts' element={<Contacts />} />
                     <Route path='/logout' element={<Logout/>} />
 

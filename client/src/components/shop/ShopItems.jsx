@@ -12,7 +12,7 @@ export default function ShopItems(){
  setShopItems(result)
 })();
     },[])
-console.log(shopItems);
+
     return(
         <>
      <section className="offers">
