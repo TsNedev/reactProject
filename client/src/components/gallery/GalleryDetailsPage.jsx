@@ -1,6 +1,6 @@
 import { useEffect, useState, useContext } from 'react';
 import styles from './GalleryDetails.module.css'
-import { useParams } from 'react-router-dom';
+import { Navigate, useParams,redirect, useNavigate } from 'react-router-dom';
 import * as galleryPostService from '../../api/galleryPostService'
 import { Link } from 'react-router-dom';
 import AuthContext from '../../contexts/authContext';
@@ -19,6 +19,12 @@ setPostDetails(result)
   },[])
 
 
+    const del=()=>{
+       galleryPostService.del(id)
+      
+    } 
+
+  
   const isOwner = user.id === postDetails._ownerId
     return(
         <>
@@ -54,7 +60,7 @@ setPostDetails(result)
 <div className={styles.buttons} >
              
             <Link to= {pathToUrl("/gallery/:id/edit",{id})}  className={styles.button}>Edit</Link>
-            <Link to="/gallery/:id/delete" className={styles.button} >Delete</Link>
+            <Link  to='/gallery' onClick={del} className={styles.button} >Delete</Link>
           </div>
           )}
           

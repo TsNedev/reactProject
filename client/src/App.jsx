@@ -21,6 +21,7 @@ import  {AuthProvider} from './contexts/authContext'
 import CreatePostEdit from '../src/components/gallery/postGallery/CreatePostEdit'
 import CreatePost from './components/gallery/postGallery/PostInGallery'
 import Logout from './components/logout/Logout'
+import DeleteForm from './components/delete/DeleteForm'
 
 
 
@@ -42,6 +43,7 @@ function App() {
                     <Route path='/createPost' element={<CreatePost />} />
                     <Route path='/gallery/:id' element={<GalleryDetails />} />
                     <Route path='/gallery/:id/edit' element={<CreatePostEdit />} />
+                    <Route path='/gallery/:id/delete' element={<DeleteForm />} />
                     <Route path='/contacts' element={<Contacts />} />
                     <Route path='/logout' element={<Logout/>} />
 

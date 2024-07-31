@@ -31,6 +31,6 @@ export const edit = async(id,data)=>{
 }
 
 export  const del =async(id)=>{
-     const result = await request.remove(`${baseUrl}/${id}`); 
-     Navigate('gallery')
+     return  await request.remove(`${baseUrl}/${id}`); 
+    
 }
