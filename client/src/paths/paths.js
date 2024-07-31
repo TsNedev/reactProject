@@ -1,7 +1,8 @@
 
 
 const Path = {
-    Home:'/'
+    Home:'/',
+    PostEdit:'/gallery/:id/edit',
 }
 
 export default Path;

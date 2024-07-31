@@ -42,7 +42,7 @@ export default function CreatePost(){
                     /* value={values[RegisterFormKeys.Username]} */
                     
                     />
-                    <input type="text"
+                    <input type="textarea"
                     placeholder="Description" 
                     id='Description'
                     name='Description'

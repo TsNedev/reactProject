@@ -1,20 +1,25 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import styles from './GalleryDetails.module.css'
 import { useParams } from 'react-router-dom';
 import * as galleryPostService from '../../api/galleryPostService'
-
+import { Link } from 'react-router-dom';
+import AuthContext from '../../contexts/authContext';
+import { pathToUrl } from '../../utils/pathUtils';
 export default function GalleryDetails(){
 
   const [postDetails,setPostDetails] = useState([]);
   const {id} = useParams();
+  const user = useContext(AuthContext)
   useEffect(()=>{
 (async()=>{ 
 const result = await galleryPostService.getOne(id);
+
 setPostDetails(result)
 })();
   },[])
-console.log(postDetails);
 
+
+  const isOwner = user.id === postDetails._ownerId
     return(
         <>
     <section className={styles.details}>
@@ -45,10 +50,14 @@ console.log(postDetails);
             <h3>Description</h3>
             <p>{postDetails.Description}</p>
           </div>
-          <div className={styles.buttons} >
-            <button className={styles.button}>Edit</button>
-            <button className={styles.button}>Delete</button>
+          {isOwner &&(
+<div className={styles.buttons} >
+             
+            <Link to= {pathToUrl("/gallery/:id/edit",{id})}  className={styles.button}>Edit</Link>
+            <Link to="/gallery/:id/delete" className={styles.button} >Delete</Link>
           </div>
+          )}
+          
         </section>
         </>
     )
