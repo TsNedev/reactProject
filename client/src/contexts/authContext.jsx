@@ -16,7 +16,7 @@ import usePersistedState from '../hooks/usePersistedState';
 
         setAuth(result);
         localStorage.setItem('accessToken',result.accessToken);
-        navigate(Path.Home);
+        navigate('/');
     };
 
      const registerSubmitHandler = async(values) =>{
@@ -24,13 +24,13 @@ import usePersistedState from '../hooks/usePersistedState';
        const result = await autService.register(values.username,values.password,values.email,values.image,values.firstName,values.lastName,values.age);
        setAuth(result);
        localStorage.setItem('accessToken',result.accessToken);
-        navigate(Path.Home);
+        navigate('/');
      }
      
    const logoutHandler = () =>{
     setAuth ({});
     localStorage.removeItem('accessToken');
-    navigate(Path.Home);
+    navigate('/');
    }
 
     const values = {

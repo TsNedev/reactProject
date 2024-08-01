@@ -30,10 +30,22 @@ export default function CreatePostEdit(){
          }
          
     }
-   
-     const {values, onChange,onSubmit}= useForm(editPostSubmitHandler,data);
-     
     
+    /*  const { values,onChange,onSubmit}= useForm(editPostSubmitHandler,data); */
+    
+    const onChange = (e) => { 
+ 
+        setData(state =>({
+          ...state,
+          [e.target.name]: e.target.value
+        }))
+       }
+  
+   
+       const onSubmit =(e) =>{
+          e.preventDefault(); 
+          editPostSubmitHandler(data);   
+       }
 
     
 
@@ -49,7 +61,7 @@ export default function CreatePostEdit(){
                     id='name'
                     name='name'
                      onChange={onChange} 
-                     value={values.name} 
+                     value={data.name} 
                     
                     />
                      <input type="text" 
@@ -57,7 +69,7 @@ export default function CreatePostEdit(){
                     id='ImageUrl'
                     name='ImageUrl'
                      onChange={onChange} 
-                     value={values.ImageUrl} 
+                     value={data.ImageUrl} 
                     
                     />
                     <input type="textarea"
@@ -65,7 +77,7 @@ export default function CreatePostEdit(){
                     id='Description'
                     name='Description'
                      onChange={onChange} 
-                    value={values.Description}/>
+                    value={data.Description}/>
 
                     <button type="submit" className="grow">Save</button>
                     

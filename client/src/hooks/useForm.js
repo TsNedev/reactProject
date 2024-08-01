@@ -6,7 +6,7 @@ export default function useForm(submitHandlers,initialValues){
 
  useEffect(()=>{
   setValues(initialValues)
- },[initialValues])
+ },[])
 
    const onChange = (e) => { 
  

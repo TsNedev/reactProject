@@ -12,6 +12,7 @@ export default function Logout(){
        autService.logout()
        .then(()=>logoutHandler())
        .catch(()=>navigate(Path.Home));
+       
    },[])    
     
     return null

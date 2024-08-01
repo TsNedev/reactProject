@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import useForm from '../../hooks/useForm'
 import AuthContext from '../../contexts/authContext';
 import './Login.css'
+import { Link } from 'react-router-dom';
 
 const LoginFormKeys = {
     Email: 'email',
@@ -37,7 +38,7 @@ export default function Login(){
 
             <button className="grow">Login</button>
 
-            <a className="link grow " href="#">Not a Member? Register</a>
+            <Link to="/register" className="link grow " href="#">Not a Member? Register</Link>
         </form>
     </section>
     </div>

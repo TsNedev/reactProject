@@ -2,12 +2,13 @@ import { useContext } from 'react'
 import './Register.css'
 import AuthContext from '../../contexts/authContext'
 import useForm from '../../hooks/useForm';
+import { Link } from 'react-router-dom';
 
 
 const RegisterFormKeys ={
     Email:'email',
     Password:'password',
-    ConfirmPassword: 'confirm-password', 
+     ConfirmPassword: 'confirm-password', 
     ImageUrl:'image',
     Username:'username',
     FirstName:'first-name',
@@ -33,6 +34,7 @@ export default function Register() {
     return (
         <div className="wrapper">
             <section className="registerForm  ">
+            <h1 className="hederLogin">Register</h1>
                 <form action="" onSubmit={onSubmit}>
 
                     <input type="text" 
@@ -41,6 +43,7 @@ export default function Register() {
                     name={RegisterFormKeys.FirstName} 
                     onChange={onChange}
                     value={values[RegisterFormKeys.FirstName]}
+                    
                     />
 
                     <input type="text" 
@@ -49,6 +52,7 @@ export default function Register() {
                     name={RegisterFormKeys.LastName}
                     onChange={onChange}
                     value={values[RegisterFormKeys.LastName]}
+                    
                      />
 
                     <input type="text" 
@@ -57,7 +61,7 @@ export default function Register() {
                     name={RegisterFormKeys.Username}
                     onChange={onChange}
                     value={values[RegisterFormKeys.Username]}
-                    required 
+                    
                     />
 
                     <input type="text" 
@@ -82,6 +86,7 @@ export default function Register() {
                     name={RegisterFormKeys.Email}
                     onChange={onChange}
                     value={values[RegisterFormKeys.Email]}
+                    
                     />
 
                     <input type="password" 
@@ -90,6 +95,7 @@ export default function Register() {
                     name={RegisterFormKeys.Password}
                     onChange={onChange}
                     value={values[RegisterFormKeys.Password]}
+                   
                     />
 
                     <input type="password" 
@@ -98,10 +104,11 @@ export default function Register() {
                     name={RegisterFormKeys.ConfirmPassword}
                     onChange={onChange}
                     value={values[RegisterFormKeys.ConfirmPassword]}
+                    
                     />
 
                     <button type="submit" className="grow">Register</button>
-                    <a className="link grow">Have Account? Login </a>
+                    <Link to='/login' className="link grow">Have Account? Login </Link>
                 </form>
             </section>
         </div>
