@@ -42,6 +42,101 @@ export default function CreatePost(){
                     /* value={values[RegisterFormKeys.Username]} */
                     
                     />
+                    <input type="text"
+                        placeholder="Knife Type"
+                        id='KnifeType'
+                        name='KnifeType'
+                       
+
+                    />
+                    <input type="text"
+                        placeholder="Overal lLength"
+                        id='OverallLength'
+                        name='OverallLength'
+                        
+
+                    />
+                    <input type="text"
+                        placeholder="Blade Length"
+                        id='BladeLength'
+                        name='BladeLength'
+                       
+                    />
+                    <input type="text"
+                        placeholder="Cutting Edge"
+                        id='CuttingEdge'
+                        name='CuttingEdge'
+                        
+
+                    />
+                    <input type="number"
+                        placeholder="Blade Thickness"
+                        id='BladeThickness'
+                        name='BladeThickness'
+                        
+
+                    />
+                    <input type="text"
+                        placeholder="Blade Steel"
+                        id='BladeSteel'
+                        name='BladeSteel'
+                        
+                    />
+                    <input type="text"
+                        placeholder="Blade Finish"
+                        id='BladeFinish'
+                        name='BladeFinish'
+                       
+
+                    />
+                    <input type="text"
+                        placeholder="Handle Material"
+                        id='HandleMaterial'
+                        name='HandleMaterial'
+                       
+                    />
+                    <input type="number"
+                        placeholder="Knife Weight"
+                        id='KnifeWeight'
+                        name='KnifeWeight'
+                       
+
+                    />
+                    <input type="number"
+                        placeholder="Weight Sheath"
+                        id='WeightSheath'
+                        name='WeightSheath'
+                        
+
+                    />
+                    <input type="text"
+                        placeholder="Sheath Included"
+                        id='SheathIncluded'
+                        name='SheathIncluded'
+                        
+
+                    />
+                    <input type="text"
+                        placeholder="Sheath Material"
+                        id='SheathMaterial'
+                        name='SheathMaterial'
+                       
+                        
+
+                    />
+                    <input type="text"
+                        placeholder="Sheath Clip"
+                        id='SheathClip'
+                        name='SheathClip'
+                       
+
+                    />
+                    <input type="text"
+                        placeholder="Designer"
+                        id='Designer'
+                        name='Designer'
+                       
+                    />
                     <input type="textarea"
                     placeholder="Description" 
                     id='Description'

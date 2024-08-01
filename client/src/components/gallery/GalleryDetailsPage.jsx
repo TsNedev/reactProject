@@ -35,20 +35,20 @@ setPostDetails(result)
           <div className={styles.info}>
             <h2>{postDetails.name}</h2>
             <ul>
-            <li> {`Knife Type:	Fixed Blade`}</li>
-<li>{ ` Overall Length:	10.50"`}</li>
-<li>{ `Blade Length:	5.13"`}</li>
-<li>{ `Cutting Edge:	5.00"`}</li>
-<li>{ `Blade Thickness:	0.250"`}</li>
-<li>{ `Blade Steel:	1095 RC 56-58`}</li>
-<li>{ `Blade Finish:	Black Traction Coating`}</li>
-<li>{ `Handle Material:	Black Linen Micarta`}</li>
-<li>{ `Knife Weight:	15.3 oz`}</li>
-<li>{ `Weight w/ Sheath:	18.6oz`}</li>
-<li>{ `Sheath Included:	Yes`}</li>
-<li>{ `Sheath Material:	Black Kydex`}</li>
-<li>{ `Sheath Clip:	Rotating Spring Steel`}</li>
-<li>{ ` Designer:	TOPS Team`}</li>
+            <li> {`Knife Type:${postDetails.KnifeType}`}</li>
+<li>{ ` Overall Length:	${postDetails.OverallLength}mm`}</li>
+<li>{ `Blade Length:	${postDetails.BladeLength}mm`}</li>
+<li>{ `Cutting Edge:	${postDetails.CuttingEdge}mm`}</li>
+<li>{ `Blade Thickness:	${postDetails.BladeThickness}mm`}</li>
+<li>{ `Blade Steel:	${postDetails.BladeSteel}`}</li>
+<li>{ `Blade Finish: ${postDetails.BladeFinish}`}</li>
+<li>{ `Handle Material:	${postDetails.HandleMaterial}`}</li>
+<li>{ `Knife Weight:	${postDetails.KnifeWeight}gr.`}</li>
+<li>{ `Weight w/ Sheath:	${postDetails.WeightSheath} gr.`}</li>
+<li>{ `Sheath Included:	${postDetails.SheathIncluded}`}</li>
+<li>{ `Sheath Material:	${postDetails.SheathMaterial}`}</li>
+<li>{ `Sheath Clip:	${postDetails.SheathClip}`}</li>
+<li>{ ` Designer:	${postDetails.Designer}`}</li>
             </ul>
           </div>
 
@@ -68,3 +68,5 @@ setPostDetails(result)
         </>
     )
 }
+
+

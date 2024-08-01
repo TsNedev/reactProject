@@ -43,6 +43,7 @@ export default function Register() {
                     name={RegisterFormKeys.FirstName} 
                     onChange={onChange}
                     value={values[RegisterFormKeys.FirstName]}
+                    required
                     
                     />
 
@@ -52,7 +53,7 @@ export default function Register() {
                     name={RegisterFormKeys.LastName}
                     onChange={onChange}
                     value={values[RegisterFormKeys.LastName]}
-                    
+                    required
                      />
 
                     <input type="text" 
@@ -61,7 +62,7 @@ export default function Register() {
                     name={RegisterFormKeys.Username}
                     onChange={onChange}
                     value={values[RegisterFormKeys.Username]}
-                    
+                    required
                     />
 
                     <input type="text" 
@@ -86,6 +87,7 @@ export default function Register() {
                     name={RegisterFormKeys.Email}
                     onChange={onChange}
                     value={values[RegisterFormKeys.Email]}
+                    required
                     
                     />
 
@@ -95,7 +97,7 @@ export default function Register() {
                     name={RegisterFormKeys.Password}
                     onChange={onChange}
                     value={values[RegisterFormKeys.Password]}
-                   
+                    required
                     />
 
                     <input type="password" 
@@ -104,7 +106,7 @@ export default function Register() {
                     name={RegisterFormKeys.ConfirmPassword}
                     onChange={onChange}
                     value={values[RegisterFormKeys.ConfirmPassword]}
-                    
+                    required
                     />
 
                     <button type="submit" className="grow">Register</button>

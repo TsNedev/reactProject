@@ -33,7 +33,7 @@ function App() {
                 <Header />
 
                 <Routes>
-                    <Route path={Path.Home} element={<Home />} />
+                    <Route path='/' element={<Home />} />
                     <Route path='/*' element={<NotFound />} />
                     <Route path='/login' element={<Login />} />
                     <Route path='/register' element={<Register />} />
