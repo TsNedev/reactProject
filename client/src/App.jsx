@@ -22,6 +22,8 @@ import CreatePostEdit from '../src/components/gallery/postGallery/CreatePostEdit
 import CreatePost from './components/gallery/postGallery/PostInGallery'
 import Logout from './components/logout/Logout'
 import DeleteForm from './components/delete/DeleteForm'
+import ShopBasket from './components/shop/basket/ShopBasket'
+import ItemDetails from './components/shop/shopDetails/ItemDetails'
 
 
 
@@ -46,6 +48,8 @@ function App() {
                     <Route path='/gallery/:id/delete' element={<DeleteForm />} />
                     <Route path='/contacts' element={<Contacts />} />
                     <Route path='/logout' element={<Logout/>} />
+                    <Route path='/basket' element={<ShopBasket/>} />
+                    <Route path='/shop/:id/:id' element={<ItemDetails />} />
 
 
 

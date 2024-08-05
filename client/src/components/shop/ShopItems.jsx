@@ -1,17 +1,23 @@
-import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom";
+import { useContext, useEffect, useState } from "react"
+import {  useParams,Link  } from "react-router-dom";
 import styles from './ShopItems.module.css'
 import{get} from '../../api/apiService'
+import AuthContext from "../../contexts/authContext";
+
 
 export default function ShopItems(){
+
     const [shopItems,setShopItems] = useState([]);
-    const {id} = useParams();
+    const {id: productId} = useParams();
+
     useEffect(()=>{
 (async()=>{ 
- const result = await get(`/shop/shopDetails/${id}`);
+ const result = await get(`/shop/shopDetails/${productId}`);
  setShopItems(result)
 })();
     },[])
+
+    const {isAuthenticated,}= useContext (AuthContext)
 
     return(
         <>
@@ -25,7 +31,9 @@ export default function ShopItems(){
             <p>{shopItem.info}</p>
                  <h3>price</h3>
             <p>{shopItem.price}$</p>
-            <button className="grow ">buy</button>
+            {isAuthenticated &&(
+            <button className="grow "><Link to={`/shop/${productId}/${shopItem._id}`}>buy</Link></button>
+            )}
         </div>
             </article>
             ))}
