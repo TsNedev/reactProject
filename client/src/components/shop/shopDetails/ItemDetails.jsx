@@ -69,7 +69,7 @@ export default function ItemDetails(){
         
        
         
-        
+        <label htmlFor="name">Name</label>
         <input 
         type="text" 
         value={itemDetails.name} 
@@ -77,6 +77,7 @@ export default function ItemDetails(){
         name="name"
         readOnly
         />
+        <label htmlFor="price">price $</label>
          <input 
         type="text" 
         value={itemDetails.price} 
@@ -84,6 +85,7 @@ export default function ItemDetails(){
         name="price"
         readOnly
         />
+        <label htmlFor="count">Quantity</label>
          <input 
         type="number"  
         id="count"
