@@ -19,6 +19,7 @@ export default function ShopItems(){
 
     const {isAuthenticated,}= useContext (AuthContext)
 
+  
     return(
         <>
      <section className="offers">

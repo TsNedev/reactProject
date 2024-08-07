@@ -8,11 +8,11 @@ import { Link } from 'react-router-dom';
 const RegisterFormKeys ={
     Email:'email',
     Password:'password',
-     ConfirmPassword: 'confirm-password', 
+    ConfirmPassword:'confirmPassword',  
     ImageUrl:'image',
     Username:'username',
-    FirstName:'first-name',
-    LastName: 'last-name',
+    FirstName:'firstName',
+    LastName:'lastName',
     Age:'age',
 
 }
@@ -26,7 +26,7 @@ export default function Register() {
         [RegisterFormKeys.LastName]:'',
         [RegisterFormKeys.Username]:'',
         [RegisterFormKeys.Password]:'',
-        [RegisterFormKeys.ConfirmPassword]:'',
+         [RegisterFormKeys.ConfirmPassword]:'', 
         [RegisterFormKeys.Age]:'',
         [RegisterFormKeys.ImageUrl]:''
     });
@@ -39,7 +39,7 @@ export default function Register() {
 
                     <input type="text" 
                     placeholder="First Name"
-                    id='first-name'
+                    id='firstName'
                     name={RegisterFormKeys.FirstName} 
                     onChange={onChange}
                     value={values[RegisterFormKeys.FirstName]}
@@ -49,7 +49,7 @@ export default function Register() {
 
                     <input type="text" 
                     placeholder="Last Name"
-                    id='last-name'
+                    id='lastName'
                     name={RegisterFormKeys.LastName}
                     onChange={onChange}
                     value={values[RegisterFormKeys.LastName]}
@@ -102,13 +102,14 @@ export default function Register() {
 
                     <input type="password" 
                     placeholder="Repeat Password" 
-                    id='repassword'
+                    id='confirmPassword'
                     name={RegisterFormKeys.ConfirmPassword}
                     onChange={onChange}
                     value={values[RegisterFormKeys.ConfirmPassword]}
                     required
                     />
-
+                    
+                  
                     <button type="submit" className="grow">Register</button>
                     <Link to='/login' className="link grow">Have Account? Login </Link>
                 </form>

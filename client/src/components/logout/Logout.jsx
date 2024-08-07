@@ -11,7 +11,7 @@ export default function Logout(){
    useEffect(()=>{
        autService.logout()
        .then(()=>logoutHandler())
-       .catch(()=>navigate(Path.Home));
+       .catch(()=>navigate("/"));
        
    },[])    
     

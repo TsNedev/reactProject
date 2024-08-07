@@ -12,9 +12,9 @@ export default function Contacts(){
         <div className='wrapperContactInfo'>
         <h3>For contact</h3>
        
-        <p><i class="fa-solid fa-map-location-dot"></i>  ж.к. Младост, бул. „Република“ 97, 9000 Варна етаж 2 </p>
+        <p><i className="fa-solid fa-map-location-dot"></i>  ж.к. Младост, бул. „Република“ 97, 9000 Варна етаж 2 </p>
         <a href= "mailto: name@email.com"><i class="fa-solid fa-envelope"></i> name@email.com </a>
-        <p> <i class="fa-solid fa-phone"></i> 0885579858</p>
+        <p> <i className="fa-solid fa-phone"></i> 0885579858</p>
         </div>
     </address>
    

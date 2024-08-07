@@ -49,7 +49,7 @@ function App() {
                     <Route path='/contacts' element={<Contacts />} />
                     <Route path='/logout' element={<Logout/>} />
                     <Route path='/basket' element={<ShopBasket/>} />
-                    <Route path='/shop/:id/:id' element={<ItemDetails />} />
+                    <Route path='/shop/:id/:id' element={<ItemDetails/>} />
 
 
 

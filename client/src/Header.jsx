@@ -28,6 +28,7 @@ export default function Header(){
                     <div className='user'>
                     <li><Link to="/createPost">Create Post</Link></li>
                     <li><Link to="logout">Logout</Link></li>
+                    <li><Link to="basket">basket</Link></li>
                     </div>
                     )}
                    

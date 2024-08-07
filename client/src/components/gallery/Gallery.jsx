@@ -11,7 +11,7 @@ export default function Gallery(){
         galleryPostService.getAll()
         .then(result => setGalleryPosts(result)); 
     },[])
-    console.log(galleryPosts)
+   
     return (
         <>
         <h1>Gallery</h1>
